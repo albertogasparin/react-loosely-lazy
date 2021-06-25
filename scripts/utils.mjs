@@ -10,6 +10,8 @@ export const getPackages = async () => {
     'packages/core/manifest',
     'packages/core/react-loosely-lazy',
     'packages/plugins/babel',
+    'packages/plugins/parcel-reporter-manifest',
+    'packages/plugins/parcel-transformer',
     'packages/plugins/webpack',
     'packages/testing/integration-app',
   ].map(path => join(rootPath, path));

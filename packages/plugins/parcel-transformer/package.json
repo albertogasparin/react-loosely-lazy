@@ -1,0 +1,39 @@
+{
+  "name": "@react-loosely-lazy/parcel-transformer",
+  "version": "0.7.0",
+  "description": "Parcel transformer plugin for react-loosely-lazy",
+  "keywords": [
+    "react-loosely-lazy",
+    "parcel",
+    "plugin",
+    "transformer"
+  ],
+  "homepage": "https://github.com/atlassian-labs/react-loosely-lazy",
+  "bugs": {
+    "url": "https://github.com/atlassian-labs/react-loosely-lazy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@github.com/atlassian-labs/react-loosely-lazy.git"
+  },
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "source": "src/index.ts",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@parcel/plugin": "2.0.0-beta.3.1"
+  },
+  "devDependencies": {
+    "@parcel/config-default": "2.0.0-beta.3.1",
+    "@parcel/core": "2.0.0-beta.3.1",
+    "@react-loosely-lazy/integration-app": "^0.7.0"
+  },
+  "engines": {
+    "parcel": "^2.0.0-beta.1"
+  }
+}

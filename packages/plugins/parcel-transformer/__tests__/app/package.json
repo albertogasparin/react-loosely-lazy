@@ -1,0 +1,18 @@
+{
+  "source": "src/index.html",
+  "alias": {
+    "custom-alias": "./lib/custom-alias.tsx"
+  },
+  "production:cjs": "dist/cjs/index.html",
+  "production:esm": "dist/esm/index.html",
+  "targets": {
+    "production:cjs": {
+      "outputFormat": "commonjs",
+      "publicUrl": "./"
+    },
+    "production:esm": {
+      "outputFormat": "esmodule",
+      "publicUrl": "./"
+    }
+  }
+}

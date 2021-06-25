@@ -103,5 +103,20 @@ module.exports = {
         'import/no-unresolved': ['off'],
       },
     },
+    // apps within test folders
+    {
+      files: ['**/__tests__/app/**', '**/__tests__/apps/**'],
+      rules: {
+        'import/no-extraneous-dependencies': ['off'],
+      },
+    },
+    // types folder
+    {
+      files: ['types/**'],
+      rules: {
+        'import/no-duplicates': ['off'],
+        'import/no-extraneous-dependencies': ['off'],
+      },
+    },
   ],
 };

@@ -31,6 +31,8 @@ jobs:
           --workspace packages/core/manifest\
           --workspace packages/core/react-loosely-lazy\
           --workspace packages/plugins/babel\
+          --workspace packages/plugins/parcel-reporter-manifest\
+          --workspace packages/plugins/parcel-transformer\
           --workspace packages/plugins/webpack
         env:
           NODE_AUTH_TOKEN: ${{secrets.REACT_LAZY_NPM_TOKEN}}

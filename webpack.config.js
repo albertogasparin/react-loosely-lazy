@@ -6,7 +6,7 @@ require('@babel/register')({
 
 const { lstatSync, readdirSync } = require('fs');
 const { resolve, basename } = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 const { ReactLooselyLazyPlugin } = require('./packages/plugins/webpack/src');
 

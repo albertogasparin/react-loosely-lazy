@@ -1,10 +1,12 @@
 .history/
 .idea/
 .local/
+.parcel-cache/
 .vscode/
 
 coverage/
 dist/
 node_modules/
 
+*.tsbuildinfo
 yarn.lock

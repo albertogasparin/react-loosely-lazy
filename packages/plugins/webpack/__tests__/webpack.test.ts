@@ -114,11 +114,17 @@ describe('ReactLooselyLazyPlugin', () => {
         [`${integrationAppPath}/src/ui/multiple-usages.tsx`]: [
           'async-multiple-usages-one.js',
         ],
+        [`${integrationAppPath}/src/ui/named-lazy-for-paint.tsx`]: [
+          'async-named-lazy-for-paint.js',
+        ],
         [`${integrationAppPath}/src/ui/nested-lazy/index.tsx`]: [
           'async-nested-lazy.js',
         ],
         [`${integrationAppPath}/src/ui/nested-lazy/main.tsx`]: [
           'async-inner-nested-lazy.js',
+        ],
+        [`${integrationAppPath}/src/ui/typed-lazy-for-paint.tsx`]: [
+          'async-typed-lazy-for-paint.js',
         ],
         [`${projectRootPath}/lib/custom-alias.tsx`]: ['async-custom-alias.js'],
       },

@@ -1,4 +1,5 @@
 import React, { lazy } from 'react';
+import type { ComponentType } from 'react';
 import {
   lazyForPaint,
   lazyAfterPaint as lazyAfterPaintAlias,
@@ -6,11 +7,25 @@ import {
 } from 'react-loosely-lazy';
 import { LazyProxy } from './ui/proxy/lazy';
 import { Static } from './ui/static';
+import type { TypedLazyForPaintProps } from './ui/typed-lazy-for-paint';
 import './styles.css';
 
 const LazyForPaint = lazyForPaint(
   () =>
     import(/* webpackChunkName: "async-lazy-for-paint" */ './ui/lazy-for-paint')
+);
+
+const NamedLazyForPaint = lazyForPaint(() =>
+  import(
+    /* webpackChunkName: "async-named-lazy-for-paint" */ './ui/named-lazy-for-paint'
+  ).then(({ NamedLazyForPaint: Component }) => Component)
+);
+
+const TypedLazyForPaint = lazyForPaint<ComponentType<TypedLazyForPaintProps>>(
+  () =>
+    import(
+      /* webpackChunkName: "async-typed-lazy-for-paint" */ './ui/typed-lazy-for-paint'
+    )
 );
 
 const LazyAfterPaintAlias = lazyAfterPaintAlias(
@@ -72,6 +87,8 @@ export const App = () => (
     <LazyProxy />
     <Static />
     <LazyForPaint />
+    <NamedLazyForPaint />
+    <TypedLazyForPaint id="foo" />
     <LazyAfterPaintAlias />
     <LazyAlias />
     <ReactLazy />
